@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title
+      = (t :sitename)
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    - if Rails.env.development?
+      = javascript_include_tag "hotwire-livereload", defer: true
+      
+  %body{'data-environment' => Rails.env}
+    = skip_links
+    .z-10= render 'layouts/header_nav'
+    = render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?
+    %main#main.container.mx-auto.mt-6.px-5.flex{class: controller.controller_name}
+      = yield
+
+
+
+
+    -# = render 'layouts/header_nav'
+
+    -# = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
+
+    -# = skip_links
+    -# = render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?
+    -# = render 'layouts/flash_messages'
+    -# %main#main.container.mx-auto.mt-6.px-5.flex{class: controller.controller_name}
+    -#   = yield
