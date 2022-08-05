@@ -22,6 +22,7 @@ gem 'haml-rails'
 gem 'html2haml'
 gem 'inline_svg'
 gem 'devise'
+gem "omniauth-google-oauth2"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
