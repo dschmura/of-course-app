@@ -6,6 +6,9 @@ class CreateAccounts < ActiveRecord::Migration[7.0]
       t.string :preferred_name
       t.boolean :personal, default: false
       t.references :user, null: false, foreign_key: true
+      t.string :domain
+      t.string :subdomain
+
 
       t.timestamps
     end

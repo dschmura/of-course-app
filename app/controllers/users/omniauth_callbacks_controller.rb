@@ -95,7 +95,6 @@ def create_user
 
   @user = User.create(
     email: auth.info.email,
-    uniqname: get_uniqname(auth.info.email),
     # name: auth.info.name,
     avatar_url: auth.info.image,
     password: Devise.friendly_token[0, 20]

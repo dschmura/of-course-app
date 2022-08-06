@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :about, :contact, :privacy]
+
   def index
   end
 
@@ -10,4 +12,6 @@ class StaticPagesController < ApplicationController
 
   def privacy
   end
+
+  
 end

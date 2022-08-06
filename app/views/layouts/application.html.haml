@@ -14,7 +14,7 @@
       
   %body{'data-environment' => Rails.env}
     = skip_links
-    .z-10= render 'layouts/header_nav'
+    = render 'layouts/header_nav'
     = render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?
     %main#main.container.mx-auto.mt-6.px-5.flex{class: controller.controller_name}
       = yield

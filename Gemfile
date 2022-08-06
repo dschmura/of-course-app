@@ -24,6 +24,8 @@ gem 'inline_svg'
 gem 'devise'
 gem "omniauth-google-oauth2"
 
+gem "acts_as_tenant"
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 

@@ -1,0 +1,29 @@
+<h2 class="text-2xl block">Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.label :email, "Email address", class: "block text-sm font-medium text-gray-700" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 sm:text-sm" %>
+
+        <div class="field">
+          <%= f.label :password, class: "block text-sm font-medium text-gray-700" %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 sm:text-sm" %>
+        </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions mt-3 ">
+    <%= f.submit "Log in", class: "w-full flex items-center justify-center border border-cyan-500  text-base font-medium rounded-2xl text-cyan-600 bg-white hover:bg-cyan-50 md:py-2 md:text-lg shadow" %>
+  </div>
+
+
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -5,5 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
   has_many :omni_auth_services, dependent: :destroy
-  has_many :accounts, dependent: :destroy
+  has_one :account, dependent: :destroy
+  acts_as_tenant(:account)
+  before_validation :set_account
+
+  def set_account
+    self.build_account
+  end
+
 end
