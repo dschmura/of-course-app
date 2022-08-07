@@ -27,7 +27,7 @@
         .hidden.sm:block.sm:ml-6
           .flex.space-x-4
             - if current_user
-              = link_to "Courses", courses_path, class: "text-sky-50 hover:bg-gray-700 hover:text-sky-300 px-2 py-2 rounded-md text-lg font-medium"
+              = link_to "Courses", user_courses_path(current_user), class: "text-sky-50 hover:bg-gray-700 hover:text-sky-300 px-2 py-2 rounded-md text-lg font-medium"
 
             / Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
             = link_to "About", about_path, class: "text-sky-50 hover:bg-gray-700 hover:text-sky-300 px-2 py-2 rounded-md text-lg font-medium"
@@ -64,6 +64,6 @@
         / Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
         = link_to "Home", root_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         - if current_user
-          = link_to "Courses", courses_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          = link_to "Courses", user_courses_path(current_user), class: "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         = link_to "About", about_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         = link_to "Contact", contact_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"

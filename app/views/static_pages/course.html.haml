@@ -1,0 +1,92 @@
+.h-full.flex
+  / Off-canvas menu for mobile, show/hide based on off-canvas menu state.
+  
+  .flex.flex-col.min-w-0.flex-1.overflow-hidden
+
+    .flex-1.relative.z-0.flex.overflow-hidden
+      %main.flex-1.relative.z-0.overflow-y-auto.focus:outline-none.xl:order-last
+        %article
+          / Profile header
+          %div
+            %div
+              %img.h-32.w-full.object-cover.lg:h-48{alt: "", src: "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"}/
+            .max-w-5xl.mx-auto.px-4.sm:px-6.lg:px-8
+              .-mt-12.sm:-mt-16.sm:flex.sm:items-end.sm:space-x-5
+                .flex
+                  %img.h-24.w-24.rounded-full.ring-4.ring-white.sm:h-32.sm:w-32{alt: "", src: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"}/
+                .mt-6.sm:flex-1.sm:min-w-0.sm:flex.sm:items-center.sm:justify-end.sm:space-x-6.sm:pb-1
+                  .sm:hidden.2xl:block.mt-6.min-w-0.flex-1
+                    %h1.text-2xl.font-bold.text-gray-900.truncate Ricardo Cooper
+                  .mt-6.flex.flex-col.justify-stretch.space-y-3.sm:flex-row.sm:space-y-0.sm:space-x-4
+                    %button.inline-flex.justify-center.px-4.py-2.border.border-cyan-300.shadow-sm.text-sm.font-medium.rounded-md.text-cyan-500.bg-white.hover:bg-gray-50.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-yellow-500.text-yellow-500.hover:text-yellow-400.group-hover:text-yellow-600{type: "button"}
+                      / Heroicon name: solid/academic-cap
+                      %svg.h-6.w-6.pr-1{fill: "none", stroke: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+                        %path{d: "M12 14l9-5-9-5-9 5 9 5z"}
+                        %path{d: "M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"}
+                        %path{d: "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
+
+                      %span Enroll
+
+              .hidden.sm:block.2xl:hidden.mt-6.min-w-0.flex-1
+                %h1.text-2xl.font-bold.text-gray-900.truncate Ricardo Cooper!!!
+          / Tabs
+          .mt-6.sm:mt-2.2xl:mt-5
+            .border-b.border-gray-200
+              .max-w-5xl.mx-auto.px-4.sm:px-6.lg:px-8
+                %nav.-mb-px.flex.space-x-8{"aria-label" => "Tabs"}
+                  / Current: "border-pink-500 text-gray-900", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                  %a.border-cyan-500.text-gray-900.whitespace-nowrap.py-4.px-1.border-b-2.font-medium.text-sm{"aria-current" => "page", href: "#"} Overview
+                  %a.border-transparent.text-gray-500.hover:text-gray-700.hover:border-gray-300.whitespace-nowrap.py-4.px-1.border-b-2.font-medium.text-sm{href: "#"} Calendar
+                  %a.border-transparent.text-gray-500.hover:text-gray-700.hover:border-gray-300.whitespace-nowrap.py-4.px-1.border-b-2.font-medium.text-sm{href: "#"} Syllabus
+          / Description list
+          .mt-6.max-w-5xl.mx-auto.px-4.sm:px-6.lg:px-8
+            %dl.grid.grid-cols-1.gap-x-4.gap-y-8.sm:grid-cols-2
+              .sm:col-span-1
+                %dt.text-sm.font-medium.text-gray-500 Phone
+                %dd.mt-1.text-sm.text-gray-900 (555) 123-4567
+              .sm:col-span-1
+                %dt.text-sm.font-medium.text-gray-500 Email
+                %dd.mt-1.text-sm.text-gray-900 ricardocooper@example.com
+
+              .sm:col-span-2
+                %dt.text-sm.font-medium.text-gray-500 About
+                %dd.mt-1.max-w-prose.text-sm.text-gray-900.space-y-5
+                  %p Tincidunt quam neque in cursus viverra orci, dapibus nec tristique. Nullam ut sit dolor consectetur urna, dui cras nec sed. Cursus risus congue arcu aenean posuere aliquam.
+                  %p Et vivamus lorem pulvinar nascetur non. Pulvinar a sed platea rhoncus ac mauris amet. Urna, sem pretium sit pretium urna, senectus vitae. Scelerisque fermentum, cursus felis dui suspendisse velit pharetra. Augue et duis cursus maecenas eget quam lectus. Accumsan vitae nascetur pharetra rhoncus praesent dictum risus suspendisse.
+          / Team member list
+          .mt-8.max-w-5xl.mx-auto.px-4.pb-12.sm:px-6.lg:px-8
+            %h2.text-sm.font-medium.text-gray-500 Team members
+            .mt-1.grid.grid-cols-1.gap-4.sm:grid-cols-2
+              .relative.rounded-lg.border.border-gray-300.bg-white.px-6.py-5.shadow-sm.flex.items-center.space-x-3.hover:border-gray-400.focus-within:ring-2.focus-within:ring-offset-2.focus-within:ring-pink-500
+                .flex-shrink-0
+                  %img.h-10.w-10.rounded-full{alt: "", src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"}/
+                .flex-1.min-w-0
+                  %a.focus:outline-none{href: "#"}
+                    %span.absolute.inset-0{"aria-hidden" => "true"}
+                    %p.text-sm.font-medium.text-gray-900 Leslie Alexander
+                    %p.text-sm.text-gray-500.truncate Co-Founder / CEO
+              .relative.rounded-lg.border.border-gray-300.bg-white.px-6.py-5.shadow-sm.flex.items-center.space-x-3.hover:border-gray-400.focus-within:ring-2.focus-within:ring-offset-2.focus-within:ring-pink-500
+                .flex-shrink-0
+                  %img.h-10.w-10.rounded-full{alt: "", src: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"}/
+                .flex-1.min-w-0
+                  %a.focus:outline-none{href: "#"}
+                    %span.absolute.inset-0{"aria-hidden" => "true"}
+                    %p.text-sm.font-medium.text-gray-900 Michael Foster
+                    %p.text-sm.text-gray-500.truncate Co-Founder / CTO
+              .relative.rounded-lg.border.border-gray-300.bg-white.px-6.py-5.shadow-sm.flex.items-center.space-x-3.hover:border-gray-400.focus-within:ring-2.focus-within:ring-offset-2.focus-within:ring-pink-500
+                .flex-shrink-0
+                  %img.h-10.w-10.rounded-full{alt: "", src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"}/
+                .flex-1.min-w-0
+                  %a.focus:outline-none{href: "#"}
+                    %span.absolute.inset-0{"aria-hidden" => "true"}
+                    %p.text-sm.font-medium.text-gray-900 Dries Vincent
+                    %p.text-sm.text-gray-500.truncate Manager, Business Relations
+              .relative.rounded-lg.border.border-gray-300.bg-white.px-6.py-5.shadow-sm.flex.items-center.space-x-3.hover:border-gray-400.focus-within:ring-2.focus-within:ring-offset-2.focus-within:ring-pink-500
+                .flex-shrink-0
+                  %img.h-10.w-10.rounded-full{alt: "", src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"}/
+                .flex-1.min-w-0
+                  %a.focus:outline-none{href: "#"}
+                    %span.absolute.inset-0{"aria-hidden" => "true"}
+                    %p.text-sm.font-medium.text-gray-900 Lindsay Walton
+                    %p.text-sm.text-gray-500.truncate Front-end Developer
+      -# 

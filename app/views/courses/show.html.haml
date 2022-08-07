@@ -4,6 +4,6 @@
   %b Name:
   = @course.name
 
-= link_to 'Edit', edit_course_path(@course)
+= link_to 'Edit', edit_user_course_path(@user, @course)
 \|
-= link_to 'Back', courses_path
+= link_to 'Back', user_courses_path(@user)

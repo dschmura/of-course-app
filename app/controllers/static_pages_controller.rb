@@ -13,5 +13,7 @@ class StaticPagesController < ApplicationController
   def privacy
   end
 
+  def course
+  end
   
 end

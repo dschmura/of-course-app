@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   
   
   
-  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"} 
-  
-  resources :courses
-  resources :accounts do
+  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"} , path: "accounts"
+
+  resources :users do
+    resources :courses
   end
 
 
@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get :contact
     get :index
     get :privacy
+    get :course
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
