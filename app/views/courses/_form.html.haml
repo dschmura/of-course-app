@@ -1,5 +1,4 @@
-= form_with(model: [@user, @course], class: "contents") do |f|
-
+= form_for @course do |f|
   - if @course.errors.any?
     #error_explanation
       %h2= "#{pluralize(@course.errors.count, "error")} prohibited this course from being saved:"
@@ -11,5 +10,17 @@
     = f.label :name
     = f.text_field :name
 
+  .field
+    = f.label :course_image
+    = f.file_field :course_image
+
+  .field
+    = f.label :user_id
+    = f.text_field :user_id
+  .field
+    = f.label :description
+    = f.rich_text_area :description, class: "trix-content"
   .actions
     = f.submit 'Save'
+
+= current_user.email

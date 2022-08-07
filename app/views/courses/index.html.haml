@@ -1,29 +1,8 @@
--# %h1 Listing courses
-
--# %table
--#   %thead
--#     %tr
--#       %th Name
--#       %th
--#       %th
--#       %th
-
--#   %tbody
--#     - @courses.each do |course|
--#       %tr
--#         %td= course.name
--#         %td= link_to 'Show', course
--#         %td= link_to 'Edit', edit_course_path(course)
--#         %td= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }
-
--# %br
-
--# = link_to 'New Course', new_user_course_path
 .w-full
   - if notice.present?
     %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
-  .flex.justify-between.items-center
+  .flex.justify-between.items-center.mb-10
     %h1.font-bold.text-4xl Courses
-    = link_to 'New course', new_user_course_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
-  #courses.min-w-full
+    = link_to 'New Course', new_course_path, class: "rounded-lg py-3 px-5 bg-cyan-600 text-cyan-50 block font-medium"
+  #courses.grid.grid-cols-1.sm:grid-cols-2.md:grid-cols-3.lg:grid-cols-4.grid-flow-row
     = render @courses

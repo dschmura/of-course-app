@@ -39,3 +39,5 @@
 
 /node_modules
 /working_files
+
+.DS_Store/

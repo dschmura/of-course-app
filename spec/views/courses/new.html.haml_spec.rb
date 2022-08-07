@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe "courses/new", type: :view do
   before(:each) do
     assign(:course, Course.new(
-      name: "MyString"
+      name: "MyString",
+      user: nil
     ))
   end
 
@@ -13,6 +14,8 @@ RSpec.describe "courses/new", type: :view do
     assert_select "form[action=?][method=?]", courses_path, "post" do
 
       assert_select "input[name=?]", "course[name]"
+
+      assert_select "input[name=?]", "course[user_id]"
     end
   end
 end

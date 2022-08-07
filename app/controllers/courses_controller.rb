@@ -1,10 +1,9 @@
 class CoursesController < ApplicationController
-  before_action :set_user
   before_action :set_course, only: %i[ show edit update destroy ]
 
   # GET /courses or /courses.json
   def index
-    @courses = @user.courses
+    @courses = Course.all
   end
 
   # GET /courses/1 or /courses/1.json
@@ -13,7 +12,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-    @course = @user.courses.build
+    @course = Course.new
   end
 
   # GET /courses/1/edit
@@ -22,11 +21,11 @@ class CoursesController < ApplicationController
 
   # POST /courses or /courses.json
   def create
-    @course = @user.courses.new(course_params)
+    @course = Course.new(course_params)
 
     respond_to do |format|
       if @course.save
-        format.html { redirect_to user_courses_url(@user), notice: "Course was successfully created." }
+        format.html { redirect_to course_url(@course), notice: "Course was successfully created." }
         format.json { render :show, status: :created, location: @course }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +38,7 @@ class CoursesController < ApplicationController
   def update
     respond_to do |format|
       if @course.update(course_params)
-        format.html { redirect_to user_courses_url(@user), notice: "Course was successfully updated." }
+        format.html { redirect_to course_url(@course), notice: "Course was successfully updated." }
         format.json { render :show, status: :ok, location: @course }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -63,11 +62,9 @@ class CoursesController < ApplicationController
     def set_course
       @course = Course.find(params[:id])
     end
-    def set_user
-      @user = User.find(params[:user_id])
-    end
+
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:name)
+      params.require(:course).permit(:name, :user_id, :description, :course_image)
     end
 end

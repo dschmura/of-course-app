@@ -1,9 +1,112 @@
-%p#notice= notice
 
-%p
-  %b Name:
-  = @course.name
+.bg-white
+  .max-w-2xl.mx-auto.py-16.px-4.sm:py-24.sm:px-6.lg:max-w-7xl.lg:px-8.lg:grid.lg:grid-cols-2.lg:gap-x-8
+    / Product details
+    .lg:max-w-lg.lg:self-end
+      .mt-4
+        %h1.text-3xl.font-extrabold.tracking-tight.text-gray-900.sm:text-4xl= @course.name
+      .mt-2 
+        %h1.text-3xl.font-extrabold.tracking-tight.text-gray-900.sm:text-xl= @course.user.first_name
+      %section.mt-4{"aria-labelledby" => "information-heading"}
+        %h2#information-heading.sr-only Course information
+        .flex.items-center
+          %p.text-lg.text-gray-900.sm:text-xl 12k students
+          .ml-4.pl-4.border-l.border-gray-300
+            %h2.sr-only Reviews
+            .flex.items-center
+              %div
+                .flex.items-center
+                  /
+                    Heroicon name: solid/star
+                    
+                    Active: "text-yellow-400", Default: "text-gray-300"
+                  %svg.text-yellow-400.h-5.w-5.flex-shrink-0{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+                    %path{d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"}
+                  / Heroicon name: solid/star
+                  %svg.text-yellow-400.h-5.w-5.flex-shrink-0{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+                    %path{d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"}
+                  / Heroicon name: solid/star
+                  %svg.text-yellow-400.h-5.w-5.flex-shrink-0{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+                    %path{d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"}
+                  / Heroicon name: solid/star
+                  %svg.text-yellow-400.h-5.w-5.flex-shrink-0{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+                    %path{d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"}
+                  / Heroicon name: solid/star
+                  %svg.text-gray-300.h-5.w-5.flex-shrink-0{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+                    %path{d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"}
+                %p.sr-only 4 out of 5 stars
+              %p.ml-2.text-sm.text-gray-500 1624 reviews
+        .mt-4.space-y-6
+          %p.text-base.text-gray-500= @course.description
+        .mt-6.flex.items-center
+          / Heroicon name: solid/check
+          %svg.flex-shrink-0.w-5.h-5.text-green-500{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+            %path{"clip-rule" => "evenodd", d: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z", "fill-rule" => "evenodd"}
+          %p.ml-2.text-sm.text-gray-500 Enrollments are open
+    / Product image
+    .mt-10.lg:mt-0.lg:col-start-2.lg:row-span-2.lg:self-center
+      .aspect-w-1.aspect-h-1.rounded-lg.overflow-hidden
+        - if @course.course_image.attached?
+          = image_tag @course.course_image, class: " w-full h-full object-center object-cover sm:w-full sm:h-full", alt: @course.name
+        - else 
+          %img.w-full.h-full.object-center.object-cover{alt: "Model wearing light green backpack with black canvas straps and front zipper pouch.", src: "https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg"}/
+    / Product form
+    .mt-10.lg:max-w-lg.lg:col-start-1.lg:row-start-2.lg:self-start
+      %section{"aria-labelledby" => "options-heading"}
+        %h2#options-heading.sr-only Product options
+        %form
+          .sm:flex.sm:justify-between
+            / Size selector
+            %fieldset
+              %legend.block.text-sm.font-medium.text-gray-700 Details
+              .mt-1.grid.grid-cols-1.gap-4.sm:grid-cols-2
+                / Active: "ring-2 ring-cyan-500"
+                .relative.block.border.border-gray-300.rounded-lg.p-4.cursor-pointer.focus:outline-none
+                  %input.sr-only{"aria-describedby" => "size-choice-0-description", "aria-labelledby" => "size-choice-0-label", name: "size-choice", type: "radio", value: "18L"}/
+                  %p#size-choice-0-label.text-base.font-medium.text-gray-900 18L
+                  %p#size-choice-0-description.mt-1.text-sm.text-gray-500 Perfect for a reasonable amount of snacks.
+                  /
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-cyan-500", Not Checked: "border-transparent"
+                  .absolute.-inset-px.rounded-lg.border-2.pointer-events-none{"aria-hidden" => "true"}
+                / Active: "ring-2 ring-cyan-500"
+                .relative.block.border.border-gray-300.rounded-lg.p-4.cursor-pointer.focus:outline-none
+                  %input.sr-only{"aria-describedby" => "size-choice-1-description", "aria-labelledby" => "size-choice-1-label", name: "size-choice", type: "radio", value: "20L"}/
+                  %p#size-choice-1-label.text-base.font-medium.text-gray-900 20L
+                  %p#size-choice-1-description.mt-1.text-sm.text-gray-500 Enough room for a serious amount of snacks.
+                  /
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-cyan-500", Not Checked: "border-transparent"
+                  .absolute.-inset-px.rounded-lg.border-2.pointer-events-none{"aria-hidden" => "true"}
+          .mt-4
+            %a.group.inline-flex.text-sm.text-gray-500.hover:text-gray-700{href: "#"}
+              %span What size should I buy?
+              / Heroicon name: solid/question-mark-circle
+              %svg.flex-shrink-0.ml-2.h-5.w-5.text-gray-400.group-hover:text-gray-500{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+                %path{"clip-rule" => "evenodd", d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z", "fill-rule" => "evenodd"}
+          .mt-10
+            %button.w-full.bg-cyan-600.border.border-transparent.rounded-md.py-3.px-8.flex.items-center.justify-center.text-base.font-medium.text-white.hover:bg-cyan-700.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-offset-gray-50.focus:ring-cyan-500{type: "submit"} I want to enroll in this, of course
 
-= link_to 'Edit', edit_user_course_path(@user, @course)
+
+
+
+
+= link_to 'Edit', edit_course_path(@course)
 \|
-= link_to 'Back', user_courses_path(@user)
+= link_to 'Back', courses_path
+
+/
+  This example requires Tailwind CSS v2.0+
+  
+  This example requires some changes to your config:
+  
+  ```
+  \// tailwind.config.js
+  module.exports = {
+  \// ...
+  plugins: [
+  \// ...
+  require('@tailwindcss/aspect-ratio'),
+  ],
+  }
+  ```
