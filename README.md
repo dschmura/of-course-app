@@ -26,3 +26,13 @@ Clone the repository
 Run bin/setup
 Run bin/dev
 
+
+## Getting Started
+
+Start the app 
+```
+$ bin/dev
+```
+
+Create a new user by signing up.
+Add a course.
