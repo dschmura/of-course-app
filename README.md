@@ -3,25 +3,11 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ystem dependencies
+  Ruby 3.1.2
+  Rails 7
+  -Postgresql
+  - Redis
 
 
 Welcome to the Of-Course.guide application. Of-Course is an online portal supporting a global community of instructors and learners. Instructors can create and manage courses and course sessions.  Learners can peruse available courses, look at detailed information about a course. Learners can also manage their enrollment(s) in available courses. 
@@ -33,4 +19,10 @@ Welcome to the Of-Course.guide application. Of-Course is an online portal suppor
 > 2. Allowing users to browse the catalog of courses
 > 3. Allowing users to view a course description on a separate page, where they can enroll or (if enrolled) un-enroll from that course
 ___
+
+## Getting setup
+
+Clone the repository
+Run bin/setup
+Run bin/dev
 
