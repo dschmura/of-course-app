@@ -5,22 +5,25 @@
       %ul
         - @course.errors.full_messages.each do |message|
           %li= message
+  %div 
+    .field
+      .block.text-sm.font-medium.text-gray-700= f.label :name
+      .appearance-none.block.w-full.px-3.py-2.border.border-gray-300.rounded-md.shadow-sm.placeholder-gray-400.focus:outline-none.focus:ring-cyan-500.focus:border-cyan-500.sm:text-sm
+        = f.text_field :name
 
-  .field
-    = f.label :name
-    = f.text_field :name
+    .field
+      .block.text-sm.font-medium.text-gray-700= f.label :course_image
+      .appearance-none.block.w-full.px-3.py-2.border.border-gray-300.rounded-md.shadow-sm.placeholder-gray-400.focus:outline-none.focus:ring-cyan-500.focus:border-cyan-500.sm:text-sm
+        = f.file_field :course_image
 
-  .field
-    = f.label :course_image
-    = f.file_field :course_image
+    .field
+      .block.text-sm.font-medium.text-gray-700= f.label :description
+      = f.rich_text_area :description, class: "trix-content"
 
-  .field
-    = f.label :user_id
-    = f.text_field :user_id
-  .field
-    = f.label :description
-    = f.rich_text_area :description, class: "trix-content"
+    .field
+      .block.text-sm.font-medium.text-gray-700= f.label :user_id
+      .appearance-none.block.w-full.px-3.py-2.border.border-gray-300.rounded-md.shadow-sm.placeholder-gray-400.focus:outline-none.focus:ring-cyan-500.focus:border-cyan-500.sm:text-sm
+        = f.text_field :user_id
+
   .actions
     = f.submit 'Save'
-
-= current_user.email
